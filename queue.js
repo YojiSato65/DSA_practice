@@ -72,15 +72,51 @@ class MyQueue
 {
     constructor()
     {
-        pushStack: []
-        popStack: []
+        this.pushStack = []
+        this.popStack = []
     }
 
-    push(value) { }
+    push(value)
+    {
+        return this.pushStack.push(value)
+    }
 
-    peek() { }
+    pop()
+    {
+        if (!this.popStack.length)
+        {
+            while (this.pushStack.length)
+            {
+                this.popStack.push(this.pushStack.pop())
+            }
+        }
+        return this.popStack.pop()
+    }
 
-    pop() { }
+    peek()
+    {
+        if (!this.popStack.length)
+        {
+            while (this.pushStack.length)
+            {
+                this.popStack.push(this.pushStack.pop())
+            }
+        }
+        return this.popStack[this.popStack.length - 1]
+    }
 
-    empty() { }
+    empty()
+    {
+        return !this.pushStack.length && !this.popStack.length
+    }
 }
+
+const myQueue = new MyQueue()
+console.log(myQueue.push('one'));
+console.log(myQueue.push('two'));
+console.log(myQueue.push('three'));
+console.log(myQueue.pop());
+console.log(myQueue.peek());
+console.log(myQueue.empty());
+
+
