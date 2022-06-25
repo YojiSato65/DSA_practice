@@ -1,33 +1,26 @@
+// console.log(2 == '2'); console.log(2 === '2')
 
-const printLet = () =>
-{
-    let a = 'i am let'
-    return console.log(a);
+// let listOfNumbers = [2, 3, 5, 7, 11]
+// console.log(listOfNumbers[6]);
+
+// const myArray = [1, 2, 3, 4, 5, 1, 6]
+// console.log(myArray.lastIndexOf(1)); // 5
+// console.log(myArray.indexOf(1)); // 5
+
+
+// let now = new Date()
+// // now.getFullYear()
+// now.getMonth()
+// // now.getDate()
+
+// console.log(now);
+
+const obj = {
+    name: 'john',
+    jobs: ['teacher', 'student'],
+    myMethod: () =>
+    {
+        this.jobs.forEach(job => console.log(`my name is ${obj.name}, i am ${job}`))
+    }
 }
-const printConst = () =>
-{
-    const b = 'i am const'
-    b = 'am i const?'
-    return console.log(b);
-}
-const printVar = () =>
-{
-    var c = 'i am var'
-    return console.log(c);
-}
-let a = 'hey'
-const b = 'hey'
-var c = 'hey'
-
-a = 'i am updated'
-// b = 'i am updated'
-var c = 'i am updated'
-
-
-printLet()
-printConst()
-printVar()
-
-console.log(a);
-console.log(b);
-console.log(c);
+console.log(obj.myMethod());
