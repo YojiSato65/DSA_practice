@@ -30,26 +30,57 @@
 
 // Selection sort
 
-const numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0];
+// const numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0];
 
-function selectionSort(array)
-{
-    const length = array.length
-    for (let i = 0; i < length - 1; i++)
-    {
-        let minIndex = i
-        for (let j = i + 1; j < length; j++)
-        {
-            if (array[minIndex] > array[j])
-            {
-                minIndex = j
-            }
-        }
-        let temp = array[i]
-        array[i] = array[minIndex]
-        array[minIndex] = temp
-    }
-    return array
-}
+// function selectionSort(array)
+// {
+//     const length = array.length
+//     for (let i = 0; i < length - 1; i++)
+//     {
+//         let minIndex = i
+//         for (let j = i + 1; j < length; j++)
+//         {
+//             if (array[minIndex] > array[j])
+//             {
+//                 minIndex = j
+//             }
+//         }
+//         let temp = array[i]
+//         array[i] = array[minIndex]
+//         array[minIndex] = temp
+//     }
+//     return array
+// }
 
-console.log(selectionSort(numbers));
+// console.log(selectionSort(numbers));
+
+
+
+
+
+
+// insertion sort
+
+// const numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0];
+
+// function insertionSort(array)
+// {
+//     for (let i = 1; i < array.length; i++)
+//     {
+//         for (let j = i; j > 0; j--)
+//         {
+//             if (array[j] < array[j - 1])
+//             {
+//                 const temp = array[j]
+//                 array[j] = array[j - 1]
+//                 array[j - 1] = temp
+//             } else
+//             {
+//                 break
+//             }
+//         }
+//     }
+//     return array
+// }
+
+// console.log(insertionSort(numbers));
