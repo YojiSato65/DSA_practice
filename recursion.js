@@ -87,7 +87,7 @@ function reverseString(str)
 {
     let arrayStr = str.split("");
     let reversedArray = [];
-    // console.log('arrayStr', arrayStr);
+    console.log('arrayStr', arrayStr);
     //We are using closure here so that we don't add the above variables to the global scope.
     function addToArray(array)
     {
@@ -97,7 +97,7 @@ function reverseString(str)
             addToArray(array);
             // console.log('reversedArray', reversedArray);
         }
-        return;
+        return reversedArray
     }
     addToArray(arrayStr);
     return reversedArray.join("");
