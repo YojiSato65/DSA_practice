@@ -1,21 +1,55 @@
+// Bubble sort
+
+// const numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0];
+
+// function bubbleSort(array)
+// {
+//     const length = array.length
+//     for (let i = 0; i < length; i++)
+//     {
+//         for (let j = 0; j < length; j++)
+//         {
+//             if (array[j] > array[j + 1])
+//             {
+//                 let temp = array[j]
+//                 array[j] = array[j + 1]
+//                 array[j + 1] = temp
+//             }
+//         }
+//     }
+//     return array
+// }
+
+// console.log(bubbleSort(numbers));
+
+
+
+
+
+
+
+// Selection sort
+
 const numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0];
 
-function bubbleSort(array)
+function selectionSort(array)
 {
     const length = array.length
-    for (let i = 0; i < length; i++)
+    for (let i = 0; i < length - 1; i++)
     {
-        for (let j = 0; j < length; j++)
+        let minIndex = i
+        for (let j = i + 1; j < length; j++)
         {
-            if (array[j] > array[j + 1])
+            if (array[minIndex] > array[j])
             {
-                let temp = array[j]
-                array[j] = array[j + 1]
-                array[j + 1] = temp
+                minIndex = j
             }
         }
+        let temp = array[i]
+        array[i] = array[minIndex]
+        array[minIndex] = temp
     }
     return array
 }
 
-console.log(bubbleSort(numbers));
+console.log(selectionSort(numbers));
