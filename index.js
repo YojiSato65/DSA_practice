@@ -15,12 +15,27 @@
 
 // console.log(now);
 
-const obj = {
-    name: 'john',
-    jobs: ['teacher', 'student'],
-    myMethod: () =>
+// const obj = {
+//     name: 'john',
+//     jobs: ['teacher', 'student'],
+//     myMethod: () =>
+//     {
+//         this.jobs.forEach(job => console.log(`my name is ${obj.name}, i am ${job}`))
+//     }
+// }
+// console.log(obj.myMethod());
+
+
+
+
+const func = () =>
+{
+    if (true)
     {
-        this.jobs.forEach(job => console.log(`my name is ${obj.name}, i am ${job}`))
+        var v = 1
+        console.log(v);
+        let l = 2
+        console.log(l);
     }
 }
-console.log(obj.myMethod());
+func()
