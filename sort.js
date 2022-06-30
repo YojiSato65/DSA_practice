@@ -148,50 +148,84 @@
 
 // quick sort
 
-const numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0];
+// const numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0];
 
-function quickSort(array, left, right)
-{
-    const len = array.length;
-    let pivot;
-    let partitionIndex;
+// function quickSort(array, left, right)
+// {
+//     const len = array.length;
+//     let pivot;
+//     let partitionIndex;
 
-    if (left < right)
-    {
-        pivot = right;
-        partitionIndex = partition(array, pivot, left, right);
+//     if (left < right)
+//     {
+//         pivot = right;
+//         partitionIndex = partition(array, pivot, left, right);
 
-        //sort left and right
-        quickSort(array, left, partitionIndex - 1);
-        quickSort(array, partitionIndex + 1, right);
-    }
-    return array;
-}
+//         //sort left and right
+//         quickSort(array, left, partitionIndex - 1);
+//         quickSort(array, partitionIndex + 1, right);
+//     }
+//     return array;
+// }
 
-function partition(array, pivot, left, right)
-{
-    let pivotValue = array[pivot];
-    let partitionIndex = left;
+// function partition(array, pivot, left, right)
+// {
+//     let pivotValue = array[pivot];
+//     let partitionIndex = left;
 
-    for (let i = left; i < right; i++)
-    {
-        if (array[i] < pivotValue)
-        {
-            swap(array, i, partitionIndex);
-            partitionIndex++;
-        }
-    }
-    swap(array, right, partitionIndex);
-    return partitionIndex;
-}
+//     for (let i = left; i < right; i++)
+//     {
+//         if (array[i] < pivotValue)
+//         {
+//             swap(array, i, partitionIndex);
+//             partitionIndex++;
+//         }
+//     }
+//     swap(array, right, partitionIndex);
+//     return partitionIndex;
+// }
 
-function swap(array, firstIndex, secondIndex)
-{
-    var temp = array[firstIndex];
-    array[firstIndex] = array[secondIndex];
-    array[secondIndex] = temp;
-}
+// function swap(array, firstIndex, secondIndex)
+// {
+//     var temp = array[firstIndex];
+//     array[firstIndex] = array[secondIndex];
+//     array[secondIndex] = temp;
+// }
 
-//Select first and last index as 2nd and 3rd parameters
-quickSort(numbers, 0, numbers.length - 1);
-console.log(numbers);
+// //Select first and last index as 2nd and 3rd parameters
+// quickSort(numbers, 0, numbers.length - 1);
+// console.log(numbers);
+
+
+
+
+
+
+
+// Interview questions
+
+//#1 - Sort 10 schools around your house by distance:
+// Insertion sort
+
+//#2 - eBay sorts listings by the current Bid amount:
+// merge sort (my answer)
+// radix or counting sort
+
+//#3 - Sport scores on ESPN
+// quick sort(sorted score, merge sort will be too much in terms of memory)
+
+//#4 - Massive database (can't fit all into memory) needs to sort through past year's user data
+// merge sort(sort externally, O (n log n))
+
+//#5 - Almost sorted Udemy review data needs to update and add 2 new reviews
+// Insertion sort
+
+//#6 - Temperature Records for the past 50 years in Canada
+// quick sort(if there is decimal numbers)
+// radix sort, counting sort(if there is no decimal number)
+
+//#7 - Large user name database needs to be sorted. Data is very random.
+// merge sort(if we have enough memory), quick sort(to save memory space)
+
+//#8 - You want to teach sorting for the first time
+// bubble sort, selection sort
