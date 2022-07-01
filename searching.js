@@ -141,6 +141,59 @@ class BinarySearchTree
         }
         return this.breadthFirstSearchR(queue, list)
     }
+
+    DFSInOrder()
+    {
+        return traverseInOrder(this.root, [])
+    }
+    DFSPostOrder()
+    {
+        return traversePostOrder(this.root, [])
+    }
+    DFSPreOrder()
+    {
+        return traversePreOrder(this.root, [])
+    }
+}
+
+function traverseInOrder(node, list)
+{
+    if (node.left)
+    {
+        traverseInOrder(node.left, list)
+    }
+    list.push(node.value)
+    if (node.right)
+    {
+        traverseInOrder(node.right, list)
+    }
+    return list
+}
+function traversePreOrder(node, list)
+{
+    list.push(node.value)
+    if (node.left)
+    {
+        traversePreOrder(node.left, list)
+    }
+    if (node.right)
+    {
+        traversePreOrder(node.right, list)
+    }
+    return list
+}
+function traversePostOrder(node, list)
+{
+    if (node.left)
+    {
+        traversePostOrder(node.left, list)
+    }
+    if (node.right)
+    {
+        traversePostOrder(node.right, list)
+    }
+    list.push(node.value)
+    return list
 }
 
 function traverse(node)
@@ -162,5 +215,6 @@ myTree.insert(170)
 
 console.log(JSON.stringify(traverse(myTree.root)))
 
-// console.log(breadthFirstSearch());
-// console.log(breadthFirstSearchR([myTree.root], [list]));
+// console.log(myTree.breadthFirstSearch());
+// console.log(myTree.breadthFirstSearchR([myTree.root], [list]));
+// console.log(myTree.DFSInOrder());
