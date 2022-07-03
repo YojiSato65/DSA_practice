@@ -41,3 +41,15 @@ const fibonacciMaster = () =>
 const fasterFib = fibonacciMaster()
 console.log('DP', fasterFib(4));
 console.log('calcu', calculations);
+
+
+const fibonacciMaster2 = (n) =>
+{
+    let array = [0, 1]
+    for (let i = 2; i <= n; i++)
+    {
+        array.push(array[i - 1] + array[i - 2])
+    }
+    return array.pop()
+}
+console.log(fibonacciMaster2(6));
