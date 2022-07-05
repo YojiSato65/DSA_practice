@@ -28,14 +28,66 @@
 
 
 
-const func = () =>
+// const func = () =>
+// {
+//     if (true)
+//     {
+//         var v = 1
+//         console.log(v);
+//         let l = 2
+//         console.log(l);
+//     }
+// }
+// func()
+
+
+
+// let str = 'hey'
+// let str2 = str
+
+// str = 'hello'
+
+// console.log(str);
+// console.log(str2);
+
+
+// const car = {
+//     name: 'toyota',
+//     model: 1990
+// }
+// const myCar = car
+// const newCar = Object.assign({}, car)
+
+// car.name = 'honda'
+// myCar.name = 'subaru'
+// newCar.name = 'nissan'
+
+// const property = 'model'
+// car[property] = 2000
+
+// console.log('car', car);
+// console.log('myCar', myCar);
+// console.log('newCar', newCar);
+// console.log(Object.keys(car))
+// console.log(Object.values(car))
+
+
+// for (let i = 0; i < Object.keys(car).length; i++)
+// {
+
+//     const key = Object.keys(car)[i]
+
+//     console.log("KEY: ", key)
+//     console.log("VALUES: ", car[key])
+// }
+
+
+function timeOut()
 {
-    if (true)
+    setTimeout(() =>
     {
-        var v = 1
-        console.log(v);
-        let l = 2
-        console.log(l);
-    }
+        console.log('i am late');
+    }, 2000)
 }
-func()
+
+timeOut()
