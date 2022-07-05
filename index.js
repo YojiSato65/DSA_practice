@@ -82,12 +82,16 @@
 // }
 
 
-function timeOut()
-{
-    setTimeout(() =>
-    {
-        console.log('i am late');
-    }, 2000)
-}
+// function timeOut()
+// {
+//     setTimeout(() =>
+//     {
+//         console.log('i am late');
+//     }, 2000)
+// }
 
-timeOut()
+// timeOut()
+
+// console.log('hey' === 'Hey');
+// console.log('hey' == 'Hey');
+
